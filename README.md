@@ -22,7 +22,6 @@
 A passionate and dedicated **Web Developer**, **iOS Developer**, and **Penetration Tester** based in **Bengaluru, India**, coding since the age of 10. Multi-time hackathon winner focused on building high-performance, user-centric web applications and testing digital systems against OWASP cybersecurity standards.
 
 - 🎓 **Education:** B.Tech in Computer Science & Engineering at **Saptagiri NPS University** (2024 – Present)
-- 💼 **Experience:** Student Developer Intern at **Apple** (Prestige Minsk Square, Bengaluru) — collaborated on iOS app optimization and feature development with Swift & Xcode
 - 🏆 **Hackathons:** Multi-hackathon winner with a focus on rapid prototyping, real-time data visualization, and robust software architecture
 - 🔒 **Security Mindset:** Practical experience in ethical hacking, vulnerability assessments, and web application security
 
