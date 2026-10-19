@@ -1,5 +1,7 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,100:161b22&height=180&section=header&text=Gaurav%20Karthik&fontSize=42&fontColor=58a6ff&fontAlignY=42&desc=Web%20Developer%20%7C%20iOS%20Developer%20%7C%20Penetration%20Tester&descSize=16&descAlignY=66&descColor=8b949e&stroke=30363d&strokeWidth=1" width="100%" alt="Gaurav Karthik Banner" />
+  <a href="https://gauravkarthik.netlify.app">
+    <img src="./assets/banner.svg" width="100%" alt="Gaurav Karthik — Web Architecture, iOS Systems, Cybersecurity" />
+  </a>
 </div>
 
 <p align="center">
@@ -22,6 +24,7 @@
 A passionate and dedicated **Web Developer**, **iOS Developer**, and **Penetration Tester** based in **Bengaluru, India**, coding since the age of 10. Multi-time hackathon winner focused on building high-performance, user-centric web applications and testing digital systems against OWASP cybersecurity standards.
 
 - 🎓 **Education:** B.Tech in Computer Science & Engineering at **Saptagiri NPS University** (2024 – Present)
+- 💡 **Expertise:** Web Development, iOS & Mobile Engineering, and Penetration Testing
 - 🏆 **Hackathons:** Multi-hackathon winner with a focus on rapid prototyping, real-time data visualization, and robust software architecture
 - 🔒 **Security Mindset:** Practical experience in ethical hacking, vulnerability assessments, and web application security
 
@@ -45,16 +48,6 @@ A passionate and dedicated **Web Developer**, **iOS Developer**, and **Penetrati
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,nodejs,firebase,swift,python,c,postgres,docker,git,github,postman&theme=dark" alt="Skills" />
 </p>
-
----
-
-### 💼 Experience
-
-#### 🍏 Student Developer Intern — **Apple Inc.**
-*Prestige Minsk Square, Bengaluru | Jan 2024 – Present*
-- Collaborated with engineering teams to design, optimize, and test iOS applications using **Swift** and **Xcode**.
-- Improved application load times, streamlined performance features, and ensured compliance with Apple's platform standards through rigorous testing and debugging.
-- Presented technical progress to senior engineers and incorporated iterative feedback in an agile environment.
 
 ---
 
