@@ -19,7 +19,7 @@ I build practical software for the web and iOS, and I enjoy understanding how ap
 
 ### Selected work
 
-**[GkAgent](https://github.com/gauravandkarthikdevelopers/gkagent)**  
+**[GkAgent](https://gkagent.vercel.app)**  
 A personal chief-of-staff application with a mobile PWA and native macOS client. Built with Next.js, React, Tauri/Rust, and PostgreSQL.
 
 **[GlobeWatch](https://github.com/Gauravkarthikeyan/GlobeWatch)**  
