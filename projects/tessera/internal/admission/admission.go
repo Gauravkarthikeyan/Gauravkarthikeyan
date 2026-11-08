@@ -1,5 +1,5 @@
 // Package admission implements the throughput-control primitives Tessera
-// borrows from Amazon DynamoDB:
+// borrows from production multi-tenant databases:
 //
 //   - TokenBucket: rate limiting with burst credit. Unused capacity accrues
 //     up to a cap, so short spikes above the provisioned rate are absorbed
@@ -136,7 +136,7 @@ func (h *HeatTracker) Throttles(now time.Duration) int { h.roll(now); return h.p
 // SplitKey returns a key k such that roughly half of the observed load is on
 // keys < k and half on keys >= k. It returns ok=false when no split can
 // separate load — most importantly when the heat is a single key, which no
-// amount of splitting can help (the classic DynamoDB "hot item" limitation).
+// amount of splitting can help (the classic "hot item" limitation).
 //
 // lo is the partition's start key; the returned key is always > lo.
 func (h *HeatTracker) SplitKey(now time.Duration, lo string) (string, bool) {

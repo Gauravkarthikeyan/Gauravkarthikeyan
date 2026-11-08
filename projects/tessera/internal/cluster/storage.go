@@ -210,7 +210,10 @@ func (s *StorageNode) apply(rep *replica, e raft.Entry) {
 				// the parent still re-trims its own data above.
 				s.groups[snap.Desc.ID] = &groupDisk{Init: snap, HS: raft.NewHardState()}
 				s.startReplica(snap.Desc.ID)
-				s.c.stats.Splits++
+				if !s.c.splitSeen[snap.Desc.ID] {
+					s.c.splitSeen[snap.Desc.ID] = true // count once, not once per replica
+					s.c.stats.Splits++
+				}
 				s.c.tracef("SPLIT n%d %s → %s + %s", s.id, cmd.Child, rep.sm.Desc(), snap.Desc)
 			}
 		}

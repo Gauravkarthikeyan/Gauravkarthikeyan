@@ -5,7 +5,7 @@
 //
 //   - item-level operations with per-item versions: Get, Put, Delete and a
 //     conditional put (CAS on version, or put-if-absent with version 0) —
-//     the same shape as DynamoDB's condition expressions;
+//     the same shape as conditional writes in most managed NoSQL stores;
 //   - exactly-once semantics for retried requests through a per-client
 //     session table (client id → last sequence number and its response);
 //   - range ownership checks applied *in log order*, so a request that was

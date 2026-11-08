@@ -51,6 +51,7 @@ type Cluster struct {
 	storage   []sim.NodeID
 	routers   []sim.NodeID
 	Shards    map[string][]int
+	splitSeen map[kv.GroupID]bool
 }
 
 func (c *Cluster) tracef(format string, args ...any) {
@@ -63,7 +64,7 @@ func (c *Cluster) partitionsOf(table string) int { return c.meta.count(table) }
 
 // New builds (but does not run) a cluster.
 func New(cfg Config) *Cluster {
-	c := &Cluster{cfg: cfg, stats: Stats{Tenants: map[string]*TenantStats{}}, Shards: map[string][]int{}}
+	c := &Cluster{cfg: cfg, stats: Stats{Tenants: map[string]*TenantStats{}}, Shards: map[string][]int{}, splitSeen: map[kv.GroupID]bool{}}
 	c.W = sim.NewWorld(cfg.Seed, sim.DefaultFaults)
 	c.W.Trace = cfg.Trace
 

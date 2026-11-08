@@ -4,7 +4,7 @@
 // a tenant's *entire* shard is shared with a misbehaving tenant is
 // 1 / C(n, k) — for n=100, k=5 that is about 1 in 75 million.
 //
-// See "Workload isolation using shuffle-sharding", Amazon Builders' Library.
+// The idea: blast radius shrinks combinatorially as n and k grow.
 package shuffle
 
 import (
