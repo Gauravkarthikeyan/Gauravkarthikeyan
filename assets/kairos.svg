@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" role="img" aria-labelledby="t d">
+  <title id="t">Kairos: value captured as load passes capacity</title>
+  <desc id="d">Line chart from the Kairos simulator, seed 1, 5,000 jobs, 4 workers. At 1.0x load FIFO keeps 12.8 percent of value, EDF 15.9 percent, density plus shed 94.2 percent. At 1.8x: 8.1, 9.5 and 81.4 percent.</desc>
+  <style>
+    .serif { font-family: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+    .line { stroke-dasharray: 1400; animation: draw 1100ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+    .facet { animation: fade 500ms ease-out both; }
+    @keyframes draw { from { stroke-dashoffset: 1400; } to { stroke-dashoffset: 0; } }
+    @keyframes fade { from { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .line, .facet { animation: none; } }
+  </style>
+
+  <rect width="1280" height="440" fill="#EFE6D2"/>
+  <rect x="14" y="14" width="1252" height="412" fill="none" stroke="#1B1A17" stroke-width="1.5"/>
+
+  <text x="64" y="58" class="mono" font-size="15" fill="#5B564C">fig. 3  share of total value captured, by policy, as load rises past capacity</text>
+
+  <!-- faceted area under density+shed: alternating planes -->
+  <g class="facet" style="animation-delay:500ms">
+    <polygon points="140,93 283,98.7 283,390 140,390" fill="#24479A" opacity="0.22"/>
+    <polygon points="283,98.7 427,107.4 427,390 283,390" fill="#24479A" opacity="0.32"/>
+    <polygon points="427,107.4 570,126 570,390 427,390" fill="#24479A" opacity="0.22"/>
+    <polygon points="570,126 713,139.2 713,390 570,390" fill="#24479A" opacity="0.32"/>
+    <polygon points="713,139.2 857,148.8 857,390 713,390" fill="#24479A" opacity="0.22"/>
+    <polygon points="857,148.8 1000,145.8 1000,390 857,390" fill="#24479A" opacity="0.32"/>
+  </g>
+
+  <!-- axes -->
+  <g stroke="#1B1A17" stroke-width="1.3">
+    <line x1="140" y1="390" x2="1000" y2="390"/>
+    <line x1="140" y1="90" x2="140" y2="390"/>
+    <line x1="134" y1="90" x2="140" y2="90"/>
+    <line x1="134" y1="240" x2="140" y2="240"/>
+  </g>
+  <g class="mono" font-size="13" fill="#5B564C">
+    <text x="126" y="95" text-anchor="end">100%</text>
+    <text x="126" y="245" text-anchor="end">50%</text>
+    <text x="126" y="395" text-anchor="end">0</text>
+    <text x="140" y="412" text-anchor="middle">0.6x</text>
+    <text x="427" y="412" text-anchor="middle">1.0x</text>
+    <text x="713" y="412" text-anchor="middle">1.4x</text>
+    <text x="1000" y="412" text-anchor="middle">1.8x load</text>
+  </g>
+
+  <!-- capacity -->
+  <line x1="427" y1="80" x2="427" y2="390" stroke="#C1272D" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="435" y="84" class="mono" font-size="13" fill="#A31F24">capacity</text>
+
+  <!-- series -->
+  <polyline class="facet" style="animation-delay:0ms" fill="none" stroke="#1B1A17" stroke-width="2" stroke-dasharray="2 5" points="140,102 283,133.8 427,351.6 570,359.1 713,362.7 857,365.1 1000,365.7"/>
+  <polyline class="line" style="animation-delay:120ms" fill="none" stroke="#94640F" stroke-width="2.5" points="140,93.9 283,96 427,342.3 570,354 713,356.4 857,359.7 1000,361.5"/>
+  <polyline class="line" style="animation-delay:240ms" fill="none" stroke="#24479A" stroke-width="4" stroke-linejoin="round" points="140,93 283,98.7 427,107.4 570,126 713,139.2 857,148.8 1000,145.8"/>
+
+  <!-- callout at capacity -->
+  <circle cx="427" cy="107.4" r="5" fill="#24479A" stroke="#EFE6D2" stroke-width="2"/>
+  <circle cx="427" cy="351.6" r="5" fill="#1B1A17" stroke="#EFE6D2" stroke-width="2"/>
+  <g class="serif" font-size="22" fill="#1B1A17">
+    <text x="446" y="182">94.2%</text>
+    <text x="446" y="292">12.8%</text>
+  </g>
+  <g class="mono" font-size="13" fill="#5B564C">
+    <text x="446" y="202">kairos, at exactly 1.0x</text>
+    <text x="446" y="312">fifo, same load</text>
+  </g>
+
+  <!-- legend + source -->
+  <g class="mono" font-size="14">
+    <line x1="1040" y1="110" x2="1080" y2="110" stroke="#24479A" stroke-width="4"/>
+    <text x="1090" y="115" fill="#1B1A17">density+shed</text>
+    <line x1="1040" y1="140" x2="1080" y2="140" stroke="#94640F" stroke-width="2.5"/>
+    <text x="1090" y="145" fill="#1B1A17">edf</text>
+    <line x1="1040" y1="170" x2="1080" y2="170" stroke="#1B1A17" stroke-width="2" stroke-dasharray="2 5"/>
+    <text x="1090" y="175" fill="#1B1A17">fifo</text>
+  </g>
+  <g class="mono" font-size="12" fill="#5B564C">
+    <text x="1040" y="320">5,000 jobs, 4 workers,</text>
+    <text x="1040" y="338">6 job classes, seed 1.</text>
+    <text x="1040" y="362">kairos simulate -sweep</text>
+  </g>
+</svg>

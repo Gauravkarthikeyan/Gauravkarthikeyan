@@ -1,117 +1,56 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=190&section=header&text=Gaurav%20Karthik&fontSize=42&fontColor=C9D1D9&fontAlignY=38&color=0:0D1117,50:161B22,100:1F6FEB&animation=fadeIn" width="100%" alt="Gaurav Karthik" />
-</p>
+<img src="assets/header.svg" width="100%" alt="Gaurav Karthikeyan. I build systems, then I try to break them." />
 
-<p align="center">
-  <a href="https://gauravkarthik.netlify.app">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=2800&pause=900&color=58A6FF&center=true&vCenter=true&width=760&height=48&lines=Web+Developer+%7C+iOS+Developer;Penetration+Tester+%7C+B.Tech+CSE+Student;Building+GkAgent%2C+GlobeWatch+%26+BMTC-ROUTE" alt="Web developer, iOS developer, and penetration tester" />
-  </a>
-</p>
+I'm Gaurav. Right now that means two things in Go: a replicated key-value store with a simulator that attacks it, and a scheduler that drops work once it's too late to matter. Around those I ship web apps, and I run my day on an assistant I built. I study Computer Science & Engineering at Saptagiri NPS University in Bengaluru.
 
-<p align="center">
-  <a href="https://gauravkarthik.netlify.app"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio" /></a>
-  <a href="mailto:gauravkarthik22@gmail.com"><img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
-  <a href="https://github.com/Gauravkarthikeyan"><img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=C9D1D9" alt="GitHub" /></a>
-</p>
+## [Tessera](https://github.com/Gauravkarthikeyan/Tessera)
 
-<h3 align="center">Building for the web, mobile, and the space between software and security.</h3>
+<img src="assets/tessera.svg" width="100%" alt="Timeline of one Tessera seed: three Raft replicas, a partition that cuts off the leader, a duplicate message arriving late, a new leader elected, and client operations checked for linearizability." />
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Gauravkarthikeyan&label=PROFILE%20VIEWS&color=1F6FEB&style=flat-square" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/Gauravkarthikeyan?label=FOLLOWERS&style=flat-square&color=58A6FF&labelColor=0D1117" alt="GitHub followers" />
-  <img src="https://img.shields.io/github/created-at/Gauravkarthikeyan/Gauravkarthikeyan?label=PROFILE%20SINCE&style=flat-square&color=BC8CFF&labelColor=0D1117" alt="Profile created at" />
-</p>
+A multi-tenant key-value store. Data is split into key-range partitions, and each partition is its own 3-way Raft group. Hot partitions split themselves, tenants are rate-limited at two levels, and routers are shuffle-sharded so one noisy tenant can't take the others down.
 
-<br />
+The simulator is the point. It crashes nodes, partitions the network, drops 20% of packets, and duplicates and reorders messages. Afterwards it checks every client operation for linearizability. When something breaks you get a seed that replays it bit for bit. The checker gets tested too: Tessera ships six bugs you can switch on, and it catches five of them within a handful of seeds.
 
-## About me
-
-I’m **Gaurav Karthik**, a developer and penetration tester from **Bengaluru, India**. I’m studying **Computer Science & Engineering at Saptagiri NPS University**, coding since I was 10, and building practical products for the web and iOS.
-
-I like taking an idea from a rough interface to something people can actually use — then looking at it from the other side to understand how it can fail.
-
-## What I build
-
-<table>
-  <tr>
-    <td width="33%" align="center" valign="top">
-      <h3>🌐 Web</h3>
-      <sub>Interfaces, APIs, dashboards, and products that feel simple to use.</sub>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <h3>📱 iOS</h3>
-      <sub>Native mobile experiences built with Swift, Xcode, and attention to detail.</sub>
-    </td>
-    <td width="33%" align="center" valign="top">
-      <h3>🛡️ Security</h3>
-      <sub>Penetration testing and vulnerability assessment through an OWASP lens.</sub>
-    </td>
-  </tr>
-</table>
-
-## Featured projects
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://gkagent.vercel.app">⚡ GkAgent</a></h3>
-      <p>A personal AI agent for organizing and assisting with everyday work.</p>
-      <p><code>Next.js</code> <code>React</code> <code>PostgreSQL</code></p>
-      <a href="https://gkagent.vercel.app">View project →</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/Gauravkarthikeyan/GlobeWatch">🌍 GlobeWatch</a></h3>
-      <p>A global supply-chain intelligence dashboard for exploring routes, disruptions, and live data.</p>
-      <p><code>TypeScript</code> <code>Next.js</code> <code>Data Viz</code></p>
-      <a href="https://github.com/Gauravkarthikeyan/GlobeWatch">View repository →</a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/Gauravkarthikeyan/BMTC-ROUTE">🚌 BMTC Route Finder</a></h3>
-      <p>A Bengaluru transit utility with GTFS data, route planning, transfers, and map views.</p>
-      <p><code>JavaScript</code> <code>Leaflet</code> <code>REST APIs</code></p>
-      <a href="https://github.com/Gauravkarthikeyan/BMTC-ROUTE">View repository →</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://gauravkarthik.netlify.app">🧭 Portfolio</a></h3>
-      <p>A visual home for my projects, experiments, and contact details.</p>
-      <p><code>React</code> <code>Next.js</code> <code>Tailwind CSS</code></p>
-      <a href="https://gauravkarthik.netlify.app">Visit portfolio →</a>
-    </td>
-  </tr>
-</table>
-
-## Languages & tools
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,python,swift,c,sql,nextjs,react,nodejs,tailwind,postgresql,sqlite,docker,git,github&theme=dark&perline=8" alt="TypeScript, JavaScript, Python, Swift, C, SQL, Next.js, React, Node.js, Tailwind CSS, PostgreSQL, SQLite, Docker, Git, and GitHub" />
-</p>
-
-## GitHub activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Gauravkarthikeyan&bg_color=0D1117&color=C9D1D9&line=58A6FF&point=BC8CFF&area=true&area_color=1F6FEB&hide_border=true&custom_title=Contribution%20activity" width="96%" alt="GitHub contribution activity" />
-</p>
-
-<div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Gauravkarthikeyan&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&icon_color=BC8CFF&ring_color=58A6FF" alt="GitHub statistics" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gauravkarthikeyan&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" alt="Top languages" />
-</div>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Gauravkarthikeyan&background=0D1117&border=30363D&stroke=30363D&ring=58A6FF&fire=FF7B72&currStreakNum=C9D1D9&sideNums=8B949E&currStreakLabel=58A6FF&sideLabels=8B949E&dates=8B949E" alt="GitHub contribution streak" />
-</p>
-
-## Currently
-
-```text
-studying       Computer Science & Engineering
-based          Bengaluru, India
-interested     product engineering · iOS · web security
-coding since   10
+```sh
+git clone https://github.com/Gauravkarthikeyan/Tessera && cd Tessera
+go run ./cmd/tessera-sim -seeds 100
 ```
 
-<p align="center">
-  <a href="https://gauravkarthik.netlify.app"><img src="https://img.shields.io/badge/Let's_build_something-1F6FEB?style=for-the-badge&logo=rocket&logoColor=white" alt="Let's build something" /></a>
-</p>
+Pure Go, standard library only, about 3.6k lines.
+
+## [Kairos](https://github.com/Gauravkarthikeyan/kairos)
+
+Cron and most job queues run work in the order it arrived. Under overload, the queue fills with jobs that are already late, and they block the ones that still matter. Kairos asks each job one more question: what does it cost if you finish me late? You answer with a small value curve, and the scheduler maximizes total value instead of arrival order. Jobs that can no longer earn anything get dropped.
+
+<img src="assets/kairos.svg" width="100%" alt="Chart of value captured by scheduling policy as load rises. At 1.0x load, FIFO keeps 12.8% of value and Kairos keeps 94.2%." />
+
+These are synthetic workloads with made-up curves, from the repo's own simulator. They show the mechanism works. Your numbers depend on your curves.
+
+```sh
+go install github.com/Gauravkarthikeyan/kairos/cmd/kairos@latest
+kairos simulate -sweep
+```
+
+## Private, and turning into products
+
+These two repos are closed while I build businesses on top of them.
+
+**GkAgent** is my assistant, Pip. It turns what I say into real records (reminders, calendar events, tasks, habits, workouts, expenses), follows up from the server when the app is closed, and reports only what actually happened. It runs as an installable PWA and a native Mac app (Tauri and Rust) on the same database, and coding agents can update it over MCP. Next.js, Vercel, Supabase Postgres. Hosting costs ₹0 a month.
+
+**Mosaic** is a marketing agency in one app for local businesses: cafés, salons, gyms, clinics. An AI CMO runs a team of specialist agents that research, plan, make content, publish, run ads, reply to reviews and report, in the owner's language. Built with Gnanashree P.
+
+## Also shipped
+
+- [BMTC Route](https://bmtc-route.vercel.app) plans Bengaluru bus trips from BMTC's GTFS data: direct routes, transfers, fares and a map.
+- [GlobeWatch](https://github.com/Gauravkarthikeyan/GlobeWatch) puts live political, economic and disaster events on an interactive globe. Built with Gnanashree P.
+
+## Lines I stole from my own READMEs
+
+> A failing seed is a perfect bug report.
+
+> A checker that never fails is indistinguishable from a checker that doesn't check.
+
+> What does it cost if you finish me late?
+
+## Reach me
+
+[gauravkarthik22@gmail.com](mailto:gauravkarthik22@gmail.com) or [gauravkarthik.netlify.app](https://gauravkarthik.netlify.app)
