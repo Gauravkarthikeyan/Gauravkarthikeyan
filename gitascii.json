@@ -16,8 +16,8 @@
       "config": {
         "accentColor": "#55ffff",
         "customTitle": "Surveillance Header",
-        "quoteText": "“Once I told the computer to do something and it did it exactly how I told it to.\"",
-        "customBio": "im a Computer Science Addict Science Childhood"
+        "quoteText": "\"I told the computer what to do, and it did exactly that.\"",
+        "customBio": "I've been programming since childhood. I like systems, infrastructure, and developer tools."
       },
       "locked": false,
       "visible": true,

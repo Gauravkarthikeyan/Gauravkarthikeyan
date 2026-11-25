@@ -237,7 +237,7 @@
 
       <!-- 2 INTERACTIVE MINECRAFT STONE BUTTONS -->
       <g transform="translate(202, 230)">
-        <!-- Button 1: Respawn (git reset --hard) -->
+        <!-- Button 1: Respawn (git reset - -hard) -->
         <g transform="translate(0, 0)">
           <rect x="0" y="0" width="180" height="32" fill="#585858" />
           <line x1="0" y1="0" x2="180" y2="0" stroke="#8b8b8b" stroke-width="2" />
