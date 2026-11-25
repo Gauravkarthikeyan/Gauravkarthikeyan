@@ -21,3 +21,48 @@ jobs:
         uses: Igorcbraz/GitAscii/action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check out published SVGs
+        uses: actions/checkout@v4
+        with:
+          ref: gitascii
+          path: gitascii-output
+
+      - name: Normalize and validate profile SVGs
+        working-directory: gitascii-output
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+
+          files = sorted(Path("profiles").rglob("*.svg"))
+          if not files:
+              raise SystemExit("No published profile SVGs found")
+
+          for path in files:
+              original = path.read_text(encoding="utf-8")
+              normalized = re.sub(
+                  r"<!--(.*?)-->",
+                  lambda match: "<!--" + match.group(1).replace("--", "- -") + "-->",
+                  original,
+                  flags=re.DOTALL,
+              )
+              if normalized != original:
+                  path.write_text(normalized, encoding="utf-8")
+                  print(f"Normalized invalid XML comment: {path}")
+              ET.parse(path)
+          PY
+
+      - name: Publish normalized SVGs
+        working-directory: gitascii-output
+        run: |
+          if git diff --quiet -- profiles; then
+            echo "No SVG changes to publish"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profiles
+          git commit -m "fix(profile): normalize invalid SVG comments"
+          git push origin HEAD:gitascii
