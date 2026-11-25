@@ -1,0 +1,144 @@
+{
+  "widgets": [
+    {
+      "instanceId": "widget_2eecb747-59c2-4e9f-b040-09d8d9c9ba16",
+      "widgetId": "surveillance-header",
+      "name": "Surveillance-header Widget",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 784,
+        "height": 456
+      },
+      "config": {
+        "accentColor": "#55ffff",
+        "customTitle": "Surveillance Header",
+        "quoteText": "“Once I told the computer to do something and it did it exactly how I told it to.\"",
+        "customBio": "im a Computer Science Addict Science Childhood"
+      },
+      "locked": false,
+      "visible": true,
+      "zIndex": 1
+    },
+    {
+      "instanceId": "widget_71b5a687-ec9a-4744-92cc-7e7f90aab6f1",
+      "widgetId": "terminal-info",
+      "name": "Terminal-info Widget",
+      "position": {
+        "x": 0,
+        "y": 400
+      },
+      "size": {
+        "width": 784,
+        "height": 288
+      },
+      "config": {},
+      "locked": false,
+      "visible": true,
+      "zIndex": 2
+    },
+    {
+      "instanceId": "widget_532a0863-9dd2-4cf9-babb-a21e0bfa708c",
+      "widgetId": "tech-stack",
+      "name": "Tech-stack Widget",
+      "position": {
+        "x": 0,
+        "y": 575
+      },
+      "size": {
+        "width": 792,
+        "height": 128
+      },
+      "config": {
+        "selectedTechs": [
+          "js",
+          "ts",
+          "react",
+          "nextjs",
+          "nodejs",
+          "tailwind",
+          "postgres",
+          "git",
+          "html",
+          "py",
+          "css",
+          "rust",
+          "go",
+          "matlab",
+          "vue",
+          "vite",
+          "reactnative",
+          "threejs",
+          "express",
+          "mongodb",
+          "redis",
+          "firebase",
+          "supabase",
+          "github",
+          "kubernetes",
+          "docker",
+          "gcp",
+          "netlify",
+          "vercel",
+          "bash",
+          "ruby",
+          "swift",
+          "postman"
+        ],
+        "customTitle": "",
+        "perLine": 16
+      },
+      "locked": false,
+      "visible": true,
+      "zIndex": 3
+    },
+    {
+      "instanceId": "widget_c1c0033b-fd3c-4a19-a879-f226592c7778",
+      "widgetId": "contribution-snake",
+      "name": "Contribution-snake Widget",
+      "position": {
+        "x": 0,
+        "y": 703
+      },
+      "size": {
+        "width": 800,
+        "height": 250
+      },
+      "config": {},
+      "locked": false,
+      "visible": true,
+      "zIndex": 4
+    },
+    {
+      "instanceId": "widget_f4a76ce9-dca2-4b8d-80d8-b8384eb7f9e2",
+      "widgetId": "minecraft-death-screen",
+      "name": "Minecraft-death-screen Widget",
+      "position": {
+        "x": 8,
+        "y": 968
+      },
+      "size": {
+        "width": 784,
+        "height": 288
+      },
+      "config": {},
+      "locked": false,
+      "visible": true,
+      "zIndex": 5
+    }
+  ],
+  "globalStyles": {
+    "backgroundColor": "#060606",
+    "textColor": "#e5e5e5",
+    "accentColor": "#c5ff4a",
+    "borderColor": "#252525",
+    "fontFamily": "'JetBrains Mono', monospace",
+    "borderRadius": 0,
+    "padding": 24,
+    "themeMode": "dark",
+    "templateStyle": "native"
+  },
+  "templateId": "terminal"
+}
